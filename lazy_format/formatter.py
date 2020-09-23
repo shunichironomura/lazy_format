@@ -37,7 +37,7 @@ class LazyFormatter(string.Formatter):
 
                 result.append(rendered)
 
-        return ''.join(result)
+        return ''.join(result), None
 
 
 __all__ = ['LazyFormatter']
