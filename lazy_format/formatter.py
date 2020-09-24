@@ -37,6 +37,7 @@ class LazyFormatter(string.Formatter):
 
                 result.append(rendered)
 
+        # TODO: the second returned value should be `auto_arg_index`
         return ''.join(result), None
 
 
