@@ -27,11 +27,11 @@ class LazyFormatter(string.Formatter):
                 try:
                     obj, arg_used = self.get_field(field_name, args, kwargs)
                     used_args.add(arg_used)
-                    format_spec = self._vformat(format_spec, args, kwargs,
+                    format_spec, _ = self._vformat(format_spec, args, kwargs,
                                                 used_args, recursion_depth - 1)
                     rendered = self.format_field(self.convert_field(obj, conversion), format_spec)
                 except (KeyError, IndexError):
-                    format_spec = self._vformat(format_spec, args, kwargs,
+                    format_spec, _ = self._vformat(format_spec, args, kwargs,
                                                 used_args, recursion_depth - 1)
                     rendered = self._unsplit_var(conversion, field_name, format_spec)
 
