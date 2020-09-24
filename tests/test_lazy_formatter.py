@@ -26,3 +26,7 @@ class LazyFormatterTestCase(unittest.TestCase):
         expectation = 'abcde{missed_var1}{missed_var2}'
         reality = self.formatter.format('{0}{a}{b}{missed_var1}{missed_var2}', 'ab', a='cd', b='e')
         self.assertEqual(expectation, reality, 'Skipping missed args doesn\'t work')
+
+
+if __name__ == '__main__':
+    unittest.main()

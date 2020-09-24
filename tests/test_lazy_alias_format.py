@@ -49,3 +49,7 @@ class LazyAliasFormatTestCase(unittest.TestCase):
         self.assertEqual(my_prj_templates, '/code/lazy_format/tmps')
         self.assertEqual(my_prj_templates.format(project_dir='/develop'), '/develop/tmps')
         self.assertEqual(my_prj_templates.format(template_dir_name='templates2'), '/code/lazy_format/templates2')
+
+
+if __name__ == '__main__':
+    unittest.main()

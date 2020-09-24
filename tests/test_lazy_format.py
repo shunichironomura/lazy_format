@@ -69,3 +69,7 @@ class LazyFormatTestCase(unittest.TestCase):
 
         project = LazyFormat('{name} {0}.{1}.{2} {year} {author!s}', 1, 0, year=2013)
         self.assertEqual(project.format(9, name='lazy format', author='miph'), 'lazy format 1.0.9 2013 miph')
+
+
+if __name__ == '__main__':
+    unittest.main()
