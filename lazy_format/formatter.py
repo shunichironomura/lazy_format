@@ -17,8 +17,7 @@ class LazyFormatter(string.Formatter):
         if recursion_depth < 0:
             raise ValueError('Max string recursion exceeded')
         result = []
-        for literal_text, field_name, format_spec, conversion in \
-                self.parse(format_string):
+        for literal_text, field_name, format_spec, conversion in self.parse(format_string):
 
             if literal_text:
                 result.append(literal_text)
